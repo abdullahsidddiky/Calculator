@@ -13,7 +13,6 @@ class HomeController extends Controller
         $validated = $request->validate([   //Validating Input Data
           'op1' => 'required',
           'op2' => 'required',
-          
             ]);
           $res;
          if($request->operator == '+'){
@@ -33,7 +32,7 @@ class HomeController extends Controller
 
          }
          $res = json_encode($res); //converting data into json format
-         return view('welcome',['res' => $res]);
+         return view('welcome',['res'=>$res]);
     }
 
 }
